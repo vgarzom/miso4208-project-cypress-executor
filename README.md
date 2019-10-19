@@ -1,7 +1,7 @@
 # miso4208-project-cypress-executor
 This project read test request from a Queue (aws sqs) and executes the test using cypress
 
-#Env Variables needed
+# Env Variables needed
 
 - database: miso4208_exam1_db
 - aws secret key: koko_secret_key
