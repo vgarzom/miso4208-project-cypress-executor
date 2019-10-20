@@ -1,0 +1,26 @@
+{
+  "name": "cypress-executer",
+  "version": "1.0.0",
+  "description": "This project read test request from a Queue (aws sqs) and executes the test using cypress",
+  "main": "run-test.js",
+  "dependencies": {
+    "aws-sdk": "^2.553.0",
+    "bluebird": "^3.7.1",
+    "cypress": "^3.4.1",
+    "mongoose": "^5.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgarzom/miso4208-project-cypress-executor.git"
+  },
+  "author": "victor garzon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vgarzom/miso4208-project-cypress-executor/issues"
+  },
+  "homepage": "https://github.com/vgarzom/miso4208-project-cypress-executor#readme"
+}
