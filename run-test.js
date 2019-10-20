@@ -179,6 +179,10 @@ function executeTest(test, callback) {
           callback(false);
         });
     } else {
+      TestObject.findByIdAndUpdate(test._id, { status: 'fail' }, (err, res) => {
+        if (err) console.log("Error updating document status");
+        else console.log("Document status updated!");
+      });
       callback(false);
     }
   })
