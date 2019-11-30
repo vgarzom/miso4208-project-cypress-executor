@@ -159,8 +159,9 @@ function executeTest(test, callback) {
             test.reporterStats = data.reporterStats;
             test.error = data.error;
             test.screenshots = data.screenshots;
+            test.status = "completed";
             if (test.reporterStats.passes === test.reporterStats.tests) {
-              test.status = "success";
+              test.result = "success";
             } else {
               test.status = "failed";
             }
