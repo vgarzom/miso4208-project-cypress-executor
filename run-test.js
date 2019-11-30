@@ -142,7 +142,7 @@ function executeTest(test, callback) {
       cypress.run({
         spec: `${fileRoot}${test.case.file_name}`,
         config: {
-          video: false
+          video: test.video
         }
       })
         .then((results) => {

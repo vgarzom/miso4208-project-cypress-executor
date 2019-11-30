@@ -13,7 +13,8 @@ var TestObjectSchema = new mongoose.Schema({
   resemble: [Object],
   creation_date: { type: Date, default: Date.now },
   status: { type: String, default: 'new' },
-  result: { type: String}
+  result: { type: String},
+  video: {type: Boolean, default: false}
 });
 
 module.exports = mongoose.model('TestObject', TestObjectSchema, 'test-objects');
