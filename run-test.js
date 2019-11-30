@@ -153,8 +153,12 @@ function executeTest(test, callback) {
           if (data.error === null) {
             data.screenshots.map((s, i) => {
               s.name = `${id}_${i}.png`;
-              uploadFile(s.path, s.name);
+              uploadFile(s.path, s.name, 'images');
             });
+
+            if (test.video) {
+              uploadFile(data.video, test._id + '.mp4', 'videos');
+            }
 
             test.reporterStats = data.reporterStats;
             test.error = data.error;
@@ -206,13 +210,13 @@ function deleteMessage(message, callback) {
   });
 }
 
-const uploadFile = (filePath, file_name) => {
+const uploadFile = (filePath, file_name, key) => {
   fs.readFile(filePath, (err, data) => {
     if (err) console.error(err);
     var base64data = new Buffer(data, 'binary');
     var params = {
       Bucket: bucketName,
-      Key: `images/${file_name}`,
+      Key: `${key}/${file_name}`,
       Body: base64data,
       ACL: 'public-read'
     };
