@@ -4,7 +4,7 @@
   "description": "This project read test request from a Queue (aws sqs) and executes the test using cypress",
   "main": "run-test.js",
   "dependencies": {
-    "aws-sdk": "^2.553.0",
+    "aws-sdk": "^2.814.0",
     "bluebird": "^3.7.1",
     "cypress": "^3.4.1",
     "mongoose": "^5.7.5"
